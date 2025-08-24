@@ -1,3 +1,6 @@
 tetris-terminal
 tetris-gui
 *.o
+
+.idea
+.vscode
