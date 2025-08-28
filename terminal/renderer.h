@@ -40,16 +40,16 @@ typedef enum {
     Color_Bright_Magenta,
     Color_Bright_Cyan,
     Color_Bright_White
-} Color;
+} Renderer_Color;
 
-const char* get_color_code(Color color);
+const char* get_color_code(Renderer_Color color);
 
 #define UTF8CharacterLength 4
 typedef char CharacterNT[UTF8CharacterLength + 1]; // Null terminated utf-8 character
 
 typedef struct {
     char data[UTF8CharacterLength];
-    Color foreground;
+    Renderer_Color foreground;
 } Character;
 
 typedef struct {
@@ -65,6 +65,6 @@ void drawAll(const Renderer *r);
 int initRenderer(Renderer *r);
 void deinitRenderer(Renderer *r);
 void clear();
-void setChar(Renderer *r, int x, int y, const char *chrNT, Color color);
-int setText(Renderer *r, int x, int y, char* text, Color color);
+void setChar(Renderer *r, int x, int y, const char *chrNT, Renderer_Color color);
+int setText(Renderer *r, int x, int y, char* text, Renderer_Color color);
 void draw(Renderer *r);

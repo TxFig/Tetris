@@ -1,5 +1,9 @@
 tetris-terminal
+tetris-terminal.exe
 tetris-gui
+tetris-gui.exe
+tetris-combined
+tetris-combined.exe
 *.o
 
 .idea

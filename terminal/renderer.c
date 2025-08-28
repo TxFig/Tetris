@@ -15,7 +15,7 @@
 #include "renderer.h"
 
 
-const char* get_color_code(Color color) {
+const char* get_color_code(Renderer_Color color) {
     switch (color) {
         case Color_Reset:          return "\033[0m";
         case Color_Black:          return "\033[30m";
@@ -118,7 +118,7 @@ static bool pointInRect(int x, int y, int w, int h) {
     return x >= 0 && x < w && y >= 0 && y < h;
 }
 
-void setChar(Renderer *r, int x, int y, const char *chrNT, Color color) {
+void setChar(Renderer *r, int x, int y, const char *chrNT, Renderer_Color color) {
     if (!pointInRect(x, y, r->width, r->height)) {
         fprintf(stderr, "Error: tried to setChar outside renderer box\n");
         exit(EXIT_FAILURE);
@@ -153,7 +153,7 @@ static int utf8CharLength(unsigned char c) {
     else return -1;
 }
 
-int setText(Renderer *r, int x, int y, char* text, Color color) {
+int setText(Renderer *r, int x, int y, char* text, Renderer_Color color) {
     unsigned char *p = (unsigned char*)text;
     while (*p) {
         int len = utf8CharLength(*p);

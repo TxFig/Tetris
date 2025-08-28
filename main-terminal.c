@@ -30,8 +30,8 @@ const CharacterNT C_BoxTL = "┌";
 const CharacterNT C_BoxTR = "┐";
 const CharacterNT C_BoxBL = "└";
 const CharacterNT C_BoxBR = "┘";
-const Color BoxColor = Color_White;
-const Color PieceColor[NumberOfPieces] = {
+const Renderer_Color BoxColor = Color_White;
+const Renderer_Color PieceColor[NumberOfPieces] = {
     Color_Red,
     Color_Green,
     Color_Yellow,
