@@ -2,15 +2,16 @@
 # Tetris
 
 
-## Build
+## Versions
 
-```bash
-make -B
-```
+### - Terminal
+Build: `make terminal`\
+Run: `./tetris-terminal`
 
-## Run
+### - GUI
+Build: `make gui`\
+Run: `./tetris-gui`
 
-```bash
-./tetris-terminal
-```
-
+### - Combined (Terminal & GUI)
+Build: `make combined`\
+Run: `./tetris-combined`
